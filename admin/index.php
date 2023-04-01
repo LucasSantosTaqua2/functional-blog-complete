@@ -13,7 +13,7 @@ include './partials/header.php'
                         </a></li>
                 </ul>
                 <ul>
-                    <li><a href="index.php"><i class="uil uil-postcard"></i>
+                    <li><a href="index.php" class="active"><i class="uil uil-postcard"></i>
                             <h5>Manage Posts</h5>
                         </a></li>
                 </ul>
@@ -23,8 +23,8 @@ include './partials/header.php'
                         </a></li>
                 </ul>
                 <ul>
-                    <li><a href="manage-user.php"><i class="uil uil-users-alt"></i>
-                            <h5>Manage User</h5>
+                    <li><a href="manage-users.php" ><i class="uil uil-users-alt"></i>
+                            <h5>Manage Users</h5>
                         </a></li>
                 </ul>
                 <ul>
@@ -33,36 +33,40 @@ include './partials/header.php'
                         </a></li>
                 </ul>
                 <ul>
-                    <li><a href="manage-categories.php" class="active"><i class="uil uil-list-ul"></i>
+                    <li><a href="manage-categories.php"><i class="uil uil-list-ul"></i>
                             <h5>Manage Categories</h5>
                         </a></li>
                 </ul>
             </aside>
             <main>
-                <h2>Manage Categories</h2>
+                <h2>Manage Users</h2>
                 <table>
                     <thead>
                         <tr>
                             <th>Title</th>
+                            <th>Category</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Travel</td>
-                            <td><a href="edit-category.php" class="btn sm">Edit</a></td>
-                            <td><a href="delete-category.php" class="btn sm danger">Delete</a></td>
-                        </tr>
-                        <tr>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
                             <td>Wild Life</td>
-                            <td><a href="edit-category.php" class="btn sm">Edit</a></td>
-                            <td><a href="delete-category.php" class="btn sm danger">Delete</a></td>
+                            <td><a href="edit-post.php" class="btn sm">Edit</a></td>
+                            <td><a href="delete-post.php" class="btn sm danger">Delete</a></td>
                         </tr>
                         <tr>
-                            <td>Music</td>
-                            <td><a href="edit-category.php" class="btn sm">Edit</a></td>
-                            <td><a href="delete-category.php" class="btn sm danger">Delete</a></td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                            <td>Wild Life</td>
+                            <td><a href="edit-post.php" class="btn sm">Edit</a></td>
+                            <td><a href="delete-post.php" class="btn sm danger">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                            <td>Wild Life</td>
+                            <td><a href="edit-post.php" class="btn sm">Edit</a></td>
+                            <td><a href="delete-post.php" class="btn sm danger">Delete</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -70,8 +74,6 @@ include './partials/header.php'
         </div>
     </section>
 
-
-    
 <?php
 include '../partials/footer.php'
 ?>
