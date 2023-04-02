@@ -4,4 +4,5 @@
     define('DB_USER', 'lucas');
     define('DB_PASS', 'admin1234');
     define('DB_NAME', 'blog');
+    session_start();
 
