@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     $description = filter_var($_POST['description'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
     if (!$title) {
-        $_SESSION['add-category'] = "Enter tilte.";
+        $_SESSION['add-category'] = "Enter title.";
     } elseif (!$description) {
         $_SESSION['add-category'] = "Enter description.";
     }
@@ -26,8 +26,8 @@ if (isset($_POST['submit'])) {
             header('location: ' . ROOT_URL . 'admin/add-category.php');
             die();
         } else {
-            $_SESSION['add-category-success'] = "Category $title added successfully.";
-            header('location: ' . ROOT_URL . 'manage-categories.php');
+            $_SESSION['add-category-success'] = "$title category added successfully.";
+            header('location: ' . ROOT_URL . 'admin/manage-categories.php');
             die();
         }
     }
