@@ -19,7 +19,7 @@ if(isset($_SESSION['user-id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Miltipage Blog Website</title>
     <!-- CUSTOM STYLESHEET -->
-    <link rel="stylesheet" href="<?= ROOT_URL ?>css/style.css">
+    <link rel="stylesheet" href="<?= ROOT_URL ?>./css/style.css">
     <!-- ICONSCOUT CDN -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!-- GOOGLE FONT (MONTSERRAT) -->
@@ -28,6 +28,13 @@ if(isset($_SESSION['user-id'])) {
 </head>
 
 <body>
+    <style>
+        .post__author{ 
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.2rem;
+        }
+    </style>
     <nav>
         <div class="container nav__container">
             <a href="<?= ROOT_URL ?>index.php" class="nav__logo">BLOG</a>

@@ -1,44 +1,43 @@
 <?php
- include 'partials/header.php'
+ include 'partials/header.php';
+
+ // fetch post from database if id is set
+ if(isset($_GET['id'])) {
+    $id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
+    $query = "SELECT * FROM posts WHERE id=$id";
+    $result = mysqli_query($connection, $query);
+    $post = mysqli_fetch_assoc($result);
+ } else {
+    header('location: ' . ROOT_URL . 'blog.php');
+    die();
+ }
 ?>
 
     <!--================================== START OF SINGLE POST ==================================-->
     <section class="singlepost">
         <div class="container singlepost__container">
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, similique!</h2>
+            <h2><?= $post['title'] ?></h2>
             <div class="post__author">
-                <div class="post__author-avatar">
-                    <img src="img/avatar3.jpg">
+                    <?php
+                    // fetch author from users table using author_id
+                    $author_id = $post['author_id'];
+                    $author_query = "SELECT * FROM users WHERE id=$author_id";
+                    $author_result = mysqli_query($connection, $author_query);
+                    $author = mysqli_fetch_assoc($author_result);
+                    ?>
+                    <div class="post__author-avatar">
+                        <img src="./images/<?= $author['avatar'] ?>">
+                    </div>
+                    <div class="post__author-info">
+                        <h5>By:  <?= " {$author['firstname']} {$author['lastname']}" ?></h5>
+                        <small><?= date("d/m/Y - H:i", strtotime($post['date_time'])) ?></small>
+                    </div>
                 </div>
-                <div class="post__author-info">
-                    <h5>By: John Mills</h5>
-                    <small>June 14, 2022 - 15:54</small>
-                </div>
-            </div>
             <div class="singlepost__thumbnail">
-                <img src="img/blog33.jpg" alt="">
+                <img src="./images/<?= $post['thumbnail'] ?>">
             </div>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci vel doloremque dolores. Perspiciatis
-                corrupti sit cupiditate, rerum quisquam deleniti a deserunt sunt omnis quo ipsam eius, repudiandae fugit
-                cum velit voluptates dolore animi modi ab. Commodi a itaque at iusto.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, sit voluptatibus? Vero maxime, repudiandae
-                facilis quae, nisi perferendis nam nesciunt esse molestias quasi amet fugiat cumque harum magni atque
-                laboriosam.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptate natus enim accusantium
-                distinctio quod aliquid hic nesciunt illum itaque facere, assumenda sapiente omnis amet modi aperiam
-                velit facilis ab. Quisquam amet sed fuga quae odit sequi ducimus ratione nemo aliquam soluta sint
-                aperiam nulla tempora quasi molestiae in voluptatem doloribus ad, reprehenderit quaerat quas assumenda
-                laudantium magni officiis. Inventore!
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci vel doloremque dolores. Perspiciatis
-                corrupti sit cupiditate, rerum quisquam deleniti a deserunt sunt omnis quo ipsam eius, repudiandae fugit
-                cum velit voluptates dolore animi modi ab. Commodi a itaque at iusto.
+                <?= $post['body'] ?>
             </p>
         </div>
     </section>

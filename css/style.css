@@ -206,15 +206,15 @@ nav button {
     transition: filter 500ms ease;
 }
 
-.post_author {
+.post__author {
     display: flex;
     gap: 1rem;
     margin-top: 1.2rem;
 }
 
 .post__author-avatar {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: var(--card-border-radius-3);
     overflow: hidden;
 }
@@ -447,6 +447,11 @@ footer ul a:hover {
 .alert__message.error {
     background-color: var(--color-red-light);
     color: var(--color-red);
+}
+
+.alert__message.error.lg {
+    text-align: center;
+    place-content: center;
 }
 
 .alert__message.success {

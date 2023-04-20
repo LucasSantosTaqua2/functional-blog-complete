@@ -1,9 +1,8 @@
 <footer>
         <div class="footer__socials">
-            <a href="https://youtube.com" target="_blank"><i class="uil uil-youtube"></i></a>
-            <a href="https://facebook.com" target="_blank"><i class="uil uil-facebook-f"></i></a>
-            <a href="https://instagram.com" target="_blank"><i class="uil uil-instagram-alt"></i></a>
-            <a href="https://linkedin.com" target="_blank"><i class="uil uil-linkedin"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100013546952794" target="_blank"><i class="uil uil-facebook-f"></i></a>
+            <a href="https://www.instagram.com/lucas.violao_ofc/" target="_blank"><i class="uil uil-instagram-alt"></i></a>
+            <a href="https://www.linkedin.com/in/lucas-santos-7785b2220/" target="_blank"><i class="uil uil-linkedin"></i></a>
             <a href="https://twitter.com" target="_blank"><i class="uil uil-twitter"></i></a>
         </div>
         <div class="container footer__container">
@@ -50,7 +49,7 @@
             </article>
         </div>
         <div class="footer__copyright">
-            <small>Copyright &copy; EGATOR TUTORIALS ON YOUTUBE. MADE BY LUCAS SANTOS FOR STUDY.</small>
+            <small>Copyright &copy; MADE BY LUCAS SANTOS FOR STUDY.</small>
         </div>
     </footer>
 
